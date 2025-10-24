@@ -12,7 +12,7 @@ export function initTable(settings, onAction) {
     const root = cloneTemplate(tableTemplate);
 
     // @todo: #1.2 —  вывести дополнительные шаблоны до и после таблицы
-    before.forEach(subName => {
+    before.reverse().forEach(subName => {
         root[subName] = cloneTemplate(subName);
         root.container.prepend(root[subName].container);
     });
